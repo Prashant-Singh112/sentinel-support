@@ -1,0 +1,32 @@
+[
+  {
+    "id": "00000000-0000-0000-0000-000000031c08",
+    "title": "Dispute Reason 10.4 - Fraud Card Present",
+    "anchor": "disputes-10-4",
+    "contentText": "Use reason 10.4 when the cardholder denies a card-present transaction and OTP was validated. Collect receipt, merchant response, and cardholder affidavit."
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000031c09",
+    "title": "Handling Duplicate Cab Authorizations",
+    "anchor": "kb-duplicate-cab",
+    "contentText": "Ride-hailing merchants commonly send a pre-authorization followed by a capture. If amounts match and capture occurs within 2 hours, treat as duplicate pending vs captured and advise to wait."
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000031c0a",
+    "title": "OTP Enforcement Policy",
+    "anchor": "kb-otp-policy",
+    "contentText": "High-risk actions (freeze/unfreeze, new device pairing) require OTP verification. Leads can override with supervisor approval logged in audit."
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000031c0b",
+    "title": "Device Change Velocity Signals",
+    "anchor": "kb-device-change",
+    "contentText": "Device changes in the last 7 days combined with cross-border spend increase risk. Confirm identity before unfreezing."
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000031c0c",
+    "title": "Travel Window Advisory",
+    "anchor": "kb-travel-window",
+    "contentText": "If customer disclosed travel window, annotate case notes and avoid false positives for matching corridors."
+  }
+]

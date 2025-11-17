@@ -1,0 +1,18 @@
+{
+  "name": "sentinel-support",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "npm@10.9.0",
+  "workspaces": [
+    "api",
+    "web"
+  ],
+  "scripts": {
+    "setup": "npm run --workspaces install",
+    "dev": "npm run dev -w api & npm run dev -w web",
+    "build": "npm run build -w api && npm run build -w web",
+    "lint": "npm run lint -w api && npm run lint -w web",
+    "fixtures:generate": "node scripts/generate-fixtures.js"
+  }
+}
+

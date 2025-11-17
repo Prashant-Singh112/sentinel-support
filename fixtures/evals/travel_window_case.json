@@ -1,0 +1,8 @@
+{
+  "id": "travel_window_case",
+  "description": "Travel window doc retrieved from KB",
+  "alertId": "55555555-1111-1111-1111-000000000003",
+  "expected": {
+    "kbAnchor": "kb-travel-window"
+  }
+}

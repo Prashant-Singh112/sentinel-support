@@ -1,0 +1,9 @@
+{
+  "id": "dispute_abc_mart",
+  "description": "Unrecognized ₹4,999 at ABC Mart",
+  "alertId": "55555555-1111-1111-1111-000000000002",
+  "expected": {
+    "action": "open-dispute",
+    "reasonCode": "10.4"
+  }
+}

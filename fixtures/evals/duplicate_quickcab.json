@@ -1,0 +1,9 @@
+{
+  "id": "duplicate_quickcab",
+  "description": "Duplicate pending vs capture explanation",
+  "alertId": "55555555-1111-1111-1111-000000000003",
+  "expected": {
+    "action": "mark-false-positive",
+    "notes": "Explain preauth vs capture"
+  }
+}

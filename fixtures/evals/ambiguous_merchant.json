@@ -1,0 +1,8 @@
+{
+  "id": "ambiguous_merchant",
+  "description": "Ambiguous merchant requires KB citation",
+  "alertId": "55555555-1111-1111-1111-000000000002",
+  "expected": {
+    "kbAnchor": "disputes-10-4"
+  }
+}

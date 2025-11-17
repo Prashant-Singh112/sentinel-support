@@ -1,0 +1,502 @@
+[
+  {
+    "customerId": "11111111-1111-1111-1111-000000000001",
+    "deviceId": "device_known_1",
+    "lastSeen": "2025-11-02T12:12:21.369Z"
+  },
+  {
+    "customerId": "11111111-1111-1111-1111-000000000002",
+    "deviceId": "device_known_2",
+    "lastSeen": "2025-10-10T12:12:21.369Z"
+  },
+  {
+    "customerId": "11111111-1111-1111-1111-000000000003",
+    "deviceId": "device_known_3",
+    "lastSeen": "2025-10-26T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000003e8",
+    "deviceId": "device_known_4",
+    "lastSeen": "2025-10-24T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000003ec",
+    "deviceId": "device_known_5",
+    "lastSeen": "2025-10-14T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000003f0",
+    "deviceId": "device_known_6",
+    "lastSeen": "2025-11-15T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000003f4",
+    "deviceId": "device_known_7",
+    "lastSeen": "2025-10-04T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000003f8",
+    "deviceId": "device_known_8",
+    "lastSeen": "2025-11-07T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000003fc",
+    "deviceId": "device_known_9",
+    "lastSeen": "2025-10-04T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000400",
+    "deviceId": "device_known_10",
+    "lastSeen": "2025-10-05T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000404",
+    "deviceId": "device_known_11",
+    "lastSeen": "2025-10-29T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000408",
+    "deviceId": "device_known_12",
+    "lastSeen": "2025-10-12T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-00000000040c",
+    "deviceId": "device_known_13",
+    "lastSeen": "2025-11-15T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000410",
+    "deviceId": "device_known_14",
+    "lastSeen": "2025-11-02T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000414",
+    "deviceId": "device_known_15",
+    "lastSeen": "2025-10-04T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000418",
+    "deviceId": "device_known_16",
+    "lastSeen": "2025-10-26T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-00000000041c",
+    "deviceId": "device_known_17",
+    "lastSeen": "2025-10-16T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000420",
+    "deviceId": "device_known_18",
+    "lastSeen": "2025-10-17T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000424",
+    "deviceId": "device_known_19",
+    "lastSeen": "2025-10-06T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000428",
+    "deviceId": "device_known_20",
+    "lastSeen": "2025-11-13T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-00000000042c",
+    "deviceId": "device_known_21",
+    "lastSeen": "2025-10-12T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000430",
+    "deviceId": "device_known_22",
+    "lastSeen": "2025-10-07T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000434",
+    "deviceId": "device_known_23",
+    "lastSeen": "2025-10-28T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000438",
+    "deviceId": "device_known_24",
+    "lastSeen": "2025-11-09T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-00000000043c",
+    "deviceId": "device_known_25",
+    "lastSeen": "2025-11-11T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000440",
+    "deviceId": "device_known_26",
+    "lastSeen": "2025-10-19T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000444",
+    "deviceId": "device_known_27",
+    "lastSeen": "2025-10-16T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000448",
+    "deviceId": "device_known_28",
+    "lastSeen": "2025-10-31T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-00000000044c",
+    "deviceId": "device_known_29",
+    "lastSeen": "2025-10-23T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000450",
+    "deviceId": "device_known_30",
+    "lastSeen": "2025-10-17T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000454",
+    "deviceId": "device_known_31",
+    "lastSeen": "2025-11-03T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000458",
+    "deviceId": "device_known_32",
+    "lastSeen": "2025-11-15T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-00000000045c",
+    "deviceId": "device_known_33",
+    "lastSeen": "2025-10-22T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000460",
+    "deviceId": "device_known_34",
+    "lastSeen": "2025-11-01T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000464",
+    "deviceId": "device_known_35",
+    "lastSeen": "2025-11-12T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000468",
+    "deviceId": "device_known_36",
+    "lastSeen": "2025-10-23T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-00000000046c",
+    "deviceId": "device_known_37",
+    "lastSeen": "2025-10-21T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000470",
+    "deviceId": "device_known_38",
+    "lastSeen": "2025-10-07T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000474",
+    "deviceId": "device_known_39",
+    "lastSeen": "2025-11-02T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000478",
+    "deviceId": "device_known_40",
+    "lastSeen": "2025-11-03T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-00000000047c",
+    "deviceId": "device_known_41",
+    "lastSeen": "2025-11-04T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000480",
+    "deviceId": "device_known_42",
+    "lastSeen": "2025-10-04T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000484",
+    "deviceId": "device_known_43",
+    "lastSeen": "2025-11-11T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000488",
+    "deviceId": "device_known_44",
+    "lastSeen": "2025-10-23T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-00000000048c",
+    "deviceId": "device_known_45",
+    "lastSeen": "2025-10-12T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000490",
+    "deviceId": "device_known_46",
+    "lastSeen": "2025-11-11T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000494",
+    "deviceId": "device_known_47",
+    "lastSeen": "2025-11-04T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000498",
+    "deviceId": "device_known_48",
+    "lastSeen": "2025-11-04T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-00000000049c",
+    "deviceId": "device_known_49",
+    "lastSeen": "2025-10-29T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004a0",
+    "deviceId": "device_known_50",
+    "lastSeen": "2025-10-12T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004a4",
+    "deviceId": "device_known_51",
+    "lastSeen": "2025-10-19T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004a8",
+    "deviceId": "device_known_52",
+    "lastSeen": "2025-10-03T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004ac",
+    "deviceId": "device_known_53",
+    "lastSeen": "2025-10-10T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004b0",
+    "deviceId": "device_known_54",
+    "lastSeen": "2025-10-11T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004b4",
+    "deviceId": "device_known_55",
+    "lastSeen": "2025-10-12T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004b8",
+    "deviceId": "device_known_56",
+    "lastSeen": "2025-11-12T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004bc",
+    "deviceId": "device_known_57",
+    "lastSeen": "2025-11-02T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004c0",
+    "deviceId": "device_known_58",
+    "lastSeen": "2025-11-10T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004c4",
+    "deviceId": "device_known_59",
+    "lastSeen": "2025-10-21T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004c8",
+    "deviceId": "device_known_60",
+    "lastSeen": "2025-11-16T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004cc",
+    "deviceId": "device_known_61",
+    "lastSeen": "2025-10-04T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004d0",
+    "deviceId": "device_known_62",
+    "lastSeen": "2025-10-05T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004d4",
+    "deviceId": "device_known_63",
+    "lastSeen": "2025-11-15T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004d8",
+    "deviceId": "device_known_64",
+    "lastSeen": "2025-10-30T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004dc",
+    "deviceId": "device_known_65",
+    "lastSeen": "2025-11-16T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004e0",
+    "deviceId": "device_known_66",
+    "lastSeen": "2025-10-21T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004e4",
+    "deviceId": "device_known_67",
+    "lastSeen": "2025-11-09T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004e8",
+    "deviceId": "device_known_68",
+    "lastSeen": "2025-11-04T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004ec",
+    "deviceId": "device_known_69",
+    "lastSeen": "2025-11-11T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004f0",
+    "deviceId": "device_known_70",
+    "lastSeen": "2025-11-06T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004f4",
+    "deviceId": "device_known_71",
+    "lastSeen": "2025-11-03T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004f8",
+    "deviceId": "device_known_72",
+    "lastSeen": "2025-10-20T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-0000000004fc",
+    "deviceId": "device_known_73",
+    "lastSeen": "2025-11-15T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000500",
+    "deviceId": "device_known_74",
+    "lastSeen": "2025-10-04T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000504",
+    "deviceId": "device_known_75",
+    "lastSeen": "2025-10-06T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000508",
+    "deviceId": "device_known_76",
+    "lastSeen": "2025-10-20T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-00000000050c",
+    "deviceId": "device_known_77",
+    "lastSeen": "2025-10-24T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000510",
+    "deviceId": "device_known_78",
+    "lastSeen": "2025-11-10T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000514",
+    "deviceId": "device_known_79",
+    "lastSeen": "2025-10-27T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000518",
+    "deviceId": "device_known_80",
+    "lastSeen": "2025-10-30T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-00000000051c",
+    "deviceId": "device_known_81",
+    "lastSeen": "2025-10-17T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000520",
+    "deviceId": "device_known_82",
+    "lastSeen": "2025-11-01T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000524",
+    "deviceId": "device_known_83",
+    "lastSeen": "2025-10-20T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000528",
+    "deviceId": "device_known_84",
+    "lastSeen": "2025-10-21T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-00000000052c",
+    "deviceId": "device_known_85",
+    "lastSeen": "2025-10-19T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000530",
+    "deviceId": "device_known_86",
+    "lastSeen": "2025-11-04T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000534",
+    "deviceId": "device_known_87",
+    "lastSeen": "2025-11-09T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000538",
+    "deviceId": "device_known_88",
+    "lastSeen": "2025-10-24T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-00000000053c",
+    "deviceId": "device_known_89",
+    "lastSeen": "2025-11-16T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000540",
+    "deviceId": "device_known_90",
+    "lastSeen": "2025-10-27T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000544",
+    "deviceId": "device_known_91",
+    "lastSeen": "2025-11-06T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000548",
+    "deviceId": "device_known_92",
+    "lastSeen": "2025-11-14T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-00000000054c",
+    "deviceId": "device_known_93",
+    "lastSeen": "2025-10-12T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000550",
+    "deviceId": "device_known_94",
+    "lastSeen": "2025-10-04T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000554",
+    "deviceId": "device_known_95",
+    "lastSeen": "2025-11-16T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000558",
+    "deviceId": "device_known_96",
+    "lastSeen": "2025-10-15T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-00000000055c",
+    "deviceId": "device_known_97",
+    "lastSeen": "2025-11-08T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000560",
+    "deviceId": "device_known_98",
+    "lastSeen": "2025-11-16T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000564",
+    "deviceId": "device_known_99",
+    "lastSeen": "2025-10-17T12:12:21.369Z"
+  },
+  {
+    "customerId": "00000000-0000-0000-0000-000000000568",
+    "deviceId": "device_known_100",
+    "lastSeen": "2025-10-11T12:12:21.369Z"
+  }
+]

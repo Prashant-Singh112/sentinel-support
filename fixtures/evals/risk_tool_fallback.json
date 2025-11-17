@@ -1,0 +1,12 @@
+{
+  "id": "risk_tool_fallback",
+  "description": "Risk tool timeout triggers fallback",
+  "alertId": "55555555-1111-1111-1111-000000000004",
+  "simulateFailures": [
+    "riskSignals"
+  ],
+  "expected": {
+    "fallbackUsed": true,
+    "maxRisk": "medium"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "chargeback_history",
+  "description": "Chargeback history considered",
+  "alertId": "55555555-1111-1111-1111-000000000002",
+  "expected": {
+    "mention": "chargeback"
+  }
+}

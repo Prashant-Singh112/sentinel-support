@@ -1,0 +1,9 @@
+{
+  "id": "freeze_otp",
+  "description": "Freeze card requires OTP verification",
+  "alertId": "55555555-1111-1111-1111-000000000001",
+  "expected": {
+    "action": "freeze-card",
+    "otpRequired": true
+  }
+}

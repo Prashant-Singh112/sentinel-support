@@ -1,0 +1,21 @@
+# Node / build
+node_modules/
+dist/
+build/
+.turbo/
+.next/
+
+# Env
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Misc
+.DS_Store
+coverage/
+tmp/
+

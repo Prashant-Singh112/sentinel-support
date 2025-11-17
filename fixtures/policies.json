@@ -1,0 +1,20 @@
+[
+  {
+    "id": "00000000-0000-0000-0000-000000031c0d",
+    "code": "OTP_REQUIRED",
+    "title": "OTP Required For Freeze",
+    "contentText": "Freeze/unfreeze requires OTP unless lead override is recorded."
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000031c0e",
+    "code": "DISPUTE_10_4",
+    "title": "Reason 10.4 Documentation",
+    "contentText": "Capture merchant receipt and customer statement before filing 10.4."
+  },
+  {
+    "id": "00000000-0000-0000-0000-000000031c0f",
+    "code": "DUPLICATE_AUTH",
+    "title": "Duplicate Auth vs Capture",
+    "contentText": "Preauth + capture pairs should not auto dispute unless capture exceeds auth."
+  }
+]

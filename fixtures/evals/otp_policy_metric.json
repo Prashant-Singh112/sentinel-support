@@ -1,0 +1,9 @@
+{
+  "id": "otp_policy_metric",
+  "description": "OTP policy increments metrics when blocked",
+  "alertId": "55555555-1111-1111-1111-000000000001",
+  "expected": {
+    "metric": "action_blocked_total",
+    "policy": "otp_required"
+  }
+}

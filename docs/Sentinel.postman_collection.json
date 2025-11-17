@@ -1,0 +1,358 @@
+{
+  "info": {
+    "name": "Sentinel Support",
+    "_postman_id": "cdd5f1b6-9f23-4d8a-854d-9178151386f0",
+    "description": "REST/SSE endpoints for Sentinel Support Console. Set `baseUrl` and `apiKey` variables before running.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Dashboard KPIs",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/dashboard/kpis",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "dashboard",
+            "kpis"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Alerts (filtered)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/alerts?risk=high&status=OPEN",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "alerts"
+          ],
+          "query": [
+            {
+              "key": "risk",
+              "value": "high"
+            },
+            {
+              "key": "status",
+              "value": "OPEN"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Alert detail",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/alerts/{{alertId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "alerts",
+            "{{alertId}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Start triage run",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"alertId\":\"{{alertId}}\"}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/triage",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "triage"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Freeze card (OTP)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Idempotency-Key",
+            "value": "{{uuid}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"cardId\":\"{{cardId}}\",\"otp\":\"123456\"}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/action/freeze-card",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "action",
+            "freeze-card"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Open dispute",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Idempotency-Key",
+            "value": "{{uuid}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"txnId\":\"{{txnId}}\",\"customerId\":\"{{customerId}}\",\"reasonCode\":\"10.4\",\"confirm\":true}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/action/open-dispute",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "action",
+            "open-dispute"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Contact customer",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Idempotency-Key",
+            "value": "{{uuid}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"customerId\":\"{{customerId}}\",\"channel\":\"sms\",\"message\":\"Console outreach\"}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/action/contact-customer",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "action",
+            "contact-customer"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Customer transactions",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/customer/{{customerId}}/transactions?limit=50",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "customer",
+            "{{customerId}}",
+            "transactions"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "50"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Customer insights",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/insights/{{customerId}}/summary",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "insights",
+            "{{customerId}}",
+            "summary"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Knowledge base search",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/kb/search?q=otp",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "kb",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "otp"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:4000"
+    },
+    {
+      "key": "apiKey",
+      "value": "agent-key"
+    },
+    {
+      "key": "alertId",
+      "value": "55555555-1111-1111-1111-000000000001"
+    },
+    {
+      "key": "customerId",
+      "value": "11111111-1111-1111-1111-000000000001"
+    },
+    {
+      "key": "txnId",
+      "value": "44444444-1111-1111-1111-000000000001"
+    },
+    {
+      "key": "cardId",
+      "value": "22222222-1111-1111-1111-000000000001"
+    },
+    {
+      "key": "uuid",
+      "value": "00000000-0000-4000-8000-000000000000"
+    }
+  ]
+}
+
