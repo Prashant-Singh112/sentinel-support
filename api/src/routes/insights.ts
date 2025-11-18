@@ -57,13 +57,21 @@ router.get("/:customerId/summary", requireApiKey, rateLimit, async (req, res) =>
     txns.reduce((acc, txn) => acc + Math.pow(Number(txn.amountCents) - mean, 2), 0) / txns.length;
   const std = Math.sqrt(variance);
   const anomalies = txns
-    .filter((txn) => Number(txn.amountCents) > mean + 2 * std)
-    .map((txn) => ({
-      ts: txn.timestamp,
-      amountCents: txn.amountCents,
-      merchant: txn.merchant,
-      note: "Amount spike"
-    }))
+    .filter((txn) => {
+      const amount = Number(txn.amountCents);
+      return amount > mean + 2 * std;
+    })
+    .map((txn) => {
+      const amount = Number(txn.amountCents);
+      const z = std > 0 ? (amount - mean) / std : 0;
+      return {
+        ts: txn.timestamp,
+        z: Math.round(z * 10) / 10, // Round to 1 decimal place
+        amountCents: txn.amountCents,
+        merchant: txn.merchant,
+        note: "Amount spike"
+      };
+    })
     .slice(0, 5);
 
   res.json({

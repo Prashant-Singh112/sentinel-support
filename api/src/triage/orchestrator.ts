@@ -12,7 +12,7 @@ import { KnownDevice } from "../entities/KnownDevice";
 import { Policy } from "../entities/Policy";
 import { metrics } from "../observability/metrics";
 import { logger } from "../logger";
-import { redactObject } from "../utils/redact";
+import { redactObject, redact } from "../utils/redact";
 import { TriageEvent, TriageRunState } from "./types";
 
 type Listener = (event: TriageEvent) => void;
@@ -102,6 +102,38 @@ interface TriageContext {
 const toolTimeoutMs = 1000;
 const retrySchedule = [150, 400];
 const flowBudgetMs = 5000;
+
+// Prompt injection protection: block suspicious patterns that could trigger tool execution
+const SUSPICIOUS_PATTERNS = [
+  /(?:execute|run|call|invoke)\s+(?:tool|function|action)/i,
+  /(?:system|admin|root|sudo)/i,
+  /(?:eval|exec|script|javascript|python)/i,
+  /(?:<script|javascript:|onerror|onload)/i,
+  /(?:union|select|insert|delete|drop|alter)\s+.*\s+from/i
+];
+
+const sanitizeInput = (input: unknown): unknown => {
+  if (typeof input === "string") {
+    // Check for prompt injection patterns
+    for (const pattern of SUSPICIOUS_PATTERNS) {
+      if (pattern.test(input)) {
+        logger.warn({ input: redact(input), pattern: pattern.toString() }, "Potential prompt injection detected");
+        return "[REDACTED: suspicious input detected]";
+      }
+    }
+    // Redact any PAN-like sequences
+    return redact(input);
+  }
+  if (Array.isArray(input)) {
+    return input.map(sanitizeInput);
+  }
+  if (input && typeof input === "object") {
+    return Object.fromEntries(
+      Object.entries(input).map(([key, value]) => [key, sanitizeInput(value)])
+    );
+  }
+  return input;
+};
 
 const ONE_HOUR_MS = 60 * 60 * 1000;
 const DUPLICATE_WINDOW_MS = 2 * 60 * 60 * 1000;
@@ -206,6 +238,12 @@ const executeWithPolicies = async (
     return null;
   }
 
+  // Sanitize context inputs before tool execution to prevent prompt injection
+  const sanitizedCtx: TriageContext = {
+    ...ctx,
+    scratch: sanitizeInput(ctx.scratch) as Record<string, unknown>
+  };
+
   let attempt = 0;
   const runAttempt = async (): Promise<unknown> => {
     attempt += 1;
@@ -214,15 +252,18 @@ const executeWithPolicies = async (
       if (ctx.options?.simulateFailures?.includes(tool)) {
         throw new Error("simulated_failure");
       }
+      // Use sanitized context for tool execution
       const result = await Promise.race([
-        handler(ctx),
+        handler(sanitizedCtx),
         new Promise((_resolve, reject) =>
           setTimeout(() => reject(new Error("timeout")), toolTimeoutMs)
         )
       ]);
+      // Sanitize result before schema validation
+      const sanitizedResult = sanitizeInput(result);
       const schema = toolSchemas[tool];
       if (schema) {
-        const parsed = schema.safeParse(result);
+        const parsed = schema.safeParse(sanitizedResult);
         if (!parsed.success) {
           throw new Error("schema_validation_failed");
         }
@@ -237,7 +278,7 @@ const executeWithPolicies = async (
         durationMs: Math.round(duration)
       });
       circuitState.set(tool, { failures: 0 });
-      return result;
+      return sanitizedResult;
     } catch (error) {
       metrics.toolCallTotal.inc({ tool, ok: "false" });
       emit({

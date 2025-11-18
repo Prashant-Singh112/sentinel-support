@@ -108,7 +108,7 @@ export interface CustomerInsights {
   categories: Array<{ name: string; pct: number }>;
   topMerchants: Array<{ merchant: string; count: number }>;
   monthlyTrend: Array<{ month: string; sum: number }>;
-  anomalies: Array<{ ts: string; amountCents: string; merchant: string; note: string }>;
+  anomalies: Array<{ ts: string; z: number; amountCents: string; merchant: string; note: string }>;
 }
 
 export const fetchCustomerInsights = (customerId: string) =>

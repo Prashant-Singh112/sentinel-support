@@ -97,6 +97,14 @@ export default function TriageDrawer({ open, alert, runId, detail, onClose }: Tr
       });
     });
 
+  const markFalsePositive = () =>
+    runAction(async () => {
+      await postJson("/api/action/mark-false-positive", {
+        alertId: alert!.id,
+        reason: "False positive confirmed by agent review"
+      });
+    });
+
   if (!open || !alert) {
     return null;
   }
@@ -117,6 +125,19 @@ export default function TriageDrawer({ open, alert, runId, detail, onClose }: Tr
           >
             Close
           </button>
+        </div>
+
+        {/* ARIA live region for streaming updates */}
+        <div aria-live="polite" aria-atomic="false" className="sr-only">
+          {events.length > 0 && (
+            <span>
+              {events[events.length - 1].type === "tool_update"
+                ? `Tool ${events[events.length - 1].tool} ${events[events.length - 1].ok ? "completed" : "failed"}`
+                : events[events.length - 1].type === "decision_finalized"
+                  ? `Decision finalized: ${finalEvent?.recommendation ?? "pending"}`
+                  : `Event: ${events[events.length - 1].type}`}
+            </span>
+          )}
         </div>
 
         <div className="flex-1 overflow-y-auto px-6 py-4 space-y-4">
@@ -174,7 +195,7 @@ export default function TriageDrawer({ open, alert, runId, detail, onClose }: Tr
         </div>
 
         <div className="border-t border-slate-200 px-6 py-4 space-y-3">
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-2 gap-2">
             <button
               type="button"
               disabled={busy}
@@ -198,6 +219,14 @@ export default function TriageDrawer({ open, alert, runId, detail, onClose }: Tr
               className="rounded-lg border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100 disabled:opacity-50"
             >
               Contact customer
+            </button>
+            <button
+              type="button"
+              disabled={busy}
+              onClick={markFalsePositive}
+              className="rounded-lg border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100 disabled:opacity-50"
+            >
+              Mark False Positive
             </button>
           </div>
           <div className="flex items-center gap-2">
